@@ -1,42 +1,68 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.container {
+  background-color: #ffffff;
+  margin:25px auto;
+  padding: 15px;
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px #1d0a884d;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width:700px) {
+  .container{
+    width: 40%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+} 
+
+.tituloTodonico {
+  margin: 15px 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.tituloTodonico span {
+  color:#1926bc;
 }
 
-.card {
-  padding: 2em;
+.nuevaTarea, .tareaPendiente {
+  background-color:#e0e2f0;
+  color:#ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  text-align: left;
 }
 
-.read-the-docs {
-  color: #888;
+.nuevaTarea input, .nuevaTarea select  {
+  width: 100%;
+  margin-bottom: 10px;
+  height:40px;
+  border-radius: 10px;
+  border:none;
+  background-color: #c7cbe5;
+  color: aliceblue;
+}
+
+.nuevaTarea input::placeholder, select option {
+  color: #698093;
+  text-align: center;
+  border: none;
+}
+
+.nuevaTarea input[type='textarea']{
+  height: 80px;
+ }
+
+.dosColumnas {
+  display: flex;
+}
+
+.dosColumnas select, .dosColumnas input {
+  flex:1;
+  color: #698093;
+  margin-bottom: 0px !important;
+}
+
+.dosColumnas input {
+  margin-left: 10px;
+  background-color: #0b0e22;
+  color:#ffffff;
 }

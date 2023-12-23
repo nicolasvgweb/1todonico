@@ -1,4 +1,7 @@
-# React + TypeScript + Vite
+# TodoNico
+
+Listado de quehaceres con la posibilidad de clasificar por etiquetas. 
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

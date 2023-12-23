@@ -1,35 +1,50 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Tarea from './Tarea.tsx';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className='container'>
+        
+        <h1 className='tituloTodonico'>Todo<span>Nico</span></h1>
+
+        <section className='nuevaTarea'>
+          <form>
+            <input type='text' id='tarea' name='tarea' placeholder='Ingresar tarea aquí'></input>
+            <br/>
+            <input type='textarea' id='descripcion' name='descripcion' placeholder='Ingresar descripción'></input>
+            <br/>
+            <div className='dosColumnas'>
+              <select name='etiquetas' id='etiquetas'>
+                <option value='trabajo'>Trabajo</option>
+                <option value='estudio'>Estudio</option>
+                <option value='familia'>Familia</option>
+                <option value='personal'>Personal</option>
+              </select>
+              <br/>
+            <input className='botonAnimacion' type='submit' id='agregar' name='agregar' value='Agregar'></input>
+            </div>
+          </form>
+        </section>
+
+        <section className='listadoTareas'>
+        <Tarea rutaImagen="iconos/iconoFamilia.svg" etiqueta="Familia" tituloTarea="Agendar reunión en Teams título muy muy largo para probr" descripcionTarea="Agendar reunión con todo el equipo de producción profesional y muy disciplinado" colorEtiqueta='#1d81e6'/>
+
+        <Tarea rutaImagen="iconos/iconoPersonal.svg" etiqueta="Personal" tituloTarea="Agendar reunión en Teams título muy muy largo para probr" descripcionTarea="Agendar reunión con todo el equipo de producción profesional y muy disciplinado" colorEtiqueta='#eaac1c'/>
+
+        <Tarea rutaImagen="iconos/iconoTrabajo.svg" etiqueta="Trabajo" tituloTarea="Agendar reunión en Teams título muy muy largo para probr" descripcionTarea="Agendar reunión con todo el equipo de producción profesional y muy disciplinado" colorEtiqueta='#ee1b45'/>
+
+        <Tarea rutaImagen="iconos/iconoEstudio.svg" etiqueta="Estudio" tituloTarea="Agendar reunión en Teams título muy muy largo para probr" descripcionTarea="Agendar reunión con todo el equipo de producción profesional y muy disciplinado" colorEtiqueta='#0ec253'/>
+          
+        
+        </section>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
 
 export default App
+
