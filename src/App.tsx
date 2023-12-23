@@ -42,6 +42,8 @@ function App() {
         
         </section>
       </div>
+      <br/>
+      <p className='creditos'> Realizado por Nicolás VG</p>
     </>
   )
 }
